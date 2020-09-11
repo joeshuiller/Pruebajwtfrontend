@@ -1,0 +1,31 @@
+table {
+    width: 100%;
+}
+mat-grid-list{
+    padding: 20px;
+}
+.finalbuttom{
+    margin-bottom: 20px!important;
+}
+.content{
+    width: 100%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    .contenedor{
+        margin-top: 20px;
+        width: 90%;
+    }
+}
+.new{
+    width: 100%;
+    display: flex;
+    justify-items: flex-end;
+    justify-content: flex-end;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    button{
+        margin-right: 20px;
+    }
+}

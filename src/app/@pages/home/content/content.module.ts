@@ -1,9 +1,8 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { ContentRoutingModule } from './content-routing.module';
+import { ContentComponent } from './content.component';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -16,24 +15,18 @@ import {MatCardModule} from '@angular/material/card';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatSelectModule} from '@angular/material/select';
 import {MatGridListModule} from '@angular/material/grid-list';
-import { HTTP_INTERCEPTORS ,  HttpClientModule,HttpClient} from '@angular/common/http';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import { InterceptorService } from './services/interceptor.service';
+import {MatDialogModule} from '@angular/material/dialog';
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [ContentComponent],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
+    CommonModule,
+    ContentRoutingModule,
     MatToolbarModule,
     MatInputModule,
-    CommonModule,
-    MatFormFieldModule,
     MatCardModule,
     MatGridListModule,
+    MatFormFieldModule,
     MatMenuModule,
     MatIconModule,
     MatButtonModule,
@@ -41,11 +34,8 @@ import { InterceptorService } from './services/interceptor.service';
     MatDividerModule,
     MatSlideToggleModule,
     MatSelectModule,
-    MatProgressSpinnerModule
-  ],
-  providers: [
-    {provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true },
-  ],
-  bootstrap: [AppComponent]
+    MatProgressSpinnerModule,
+    MatDialogModule
+  ]
 })
-export class AppModule { }
+export class ContentModule { }

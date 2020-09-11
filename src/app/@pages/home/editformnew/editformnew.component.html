@@ -1,0 +1,30 @@
+<mat-card>
+    <mat-card-content>
+      <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+        <h2>Actualizar taera</h2>
+        <mat-form-field class="full-width-input">
+          <input matInput placeholder="Nombre tarea" formControlName="tarea" required>
+          <mat-error>
+            El nombre de la tarea es obligatorio
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="full-width-input">
+          <input matInput  placeholder="Descrpción tarea" formControlName="description" required>
+          <mat-error>
+            La descripción de la tarea es obligatorio
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Favorite car</mat-label>
+            <select matNativeControl formControlName="select" name="car" required>
+              <option value="" selected></option>
+              <option value="0">Abierto</option>
+              <option value="1">En proceso</option>
+              <option value="2">Terminando</option>
+              <option value="3">Cerrado</option>
+            </select>
+        </mat-form-field>
+        <button mat-raised-button color="primary" [disabled]="form.invalid">Registrar</button>
+      </form>
+    </mat-card-content>
+</mat-card>
